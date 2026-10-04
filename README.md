@@ -21,19 +21,15 @@
 
 ---
 
-QReate is a free, open-source QR code generator with a live preview. You can tweak the colors, module shapes, corner styles, and drop your own logo in the middle, and watch the code update as you go. Everything runs in your browser, so whatever you put into a code (a Wi-Fi password, someone's contact details, a link) never leaves your device. The codes are static, which means they don't expire, there's no scan limit, and nothing breaks if some third-party redirect service disappears.
+4ELEMENTS QR Kit is a browser-based QR code toolkit for local businesses. It helps create static QR codes for Google review links, WhatsApp contact, menus, booking pages, Wi-Fi access, contact details and other customer touchpoints. Codes are generated in the browser, so the entered content does not need to be sent to a server. The QR codes are static, do not expire and have no scan limit.
 
 ## Features
 
-- Free with no limits. No account, no watermark, nothing hidden behind a paywall.
-- Runs on your device. Codes are built in the browser, so nothing you type gets uploaded anywhere.
-- Codes never expire. The content is baked straight into the code, so there's no redirect to break and no cap on scans.
-- 11 content types: URL, plain text, Wi-Fi, vCard, email, SMS, phone, geolocation, calendar event, cryptocurrency, and raw bytes.
-- Styling that goes deep: 12 module shapes, custom corner (finder) patterns, any color, and transparent backgrounds.
-- Add your logo. Upload an image, size it, set its opacity, and clear the modules behind it so it stays readable.
-- Export for print or screen. Save as SVG, or PNG/JPEG up to 4096px, or just copy it to the clipboard.
-- Share with a link. The whole design is packed into the URL, so sending the link hands someone the exact same code.
-- Light and dark themes, responsive layout, and keyboard support.
+- Create static QR codes for review links, WhatsApp contact, menus, booking pages, Wi-Fi access and contact details.
+- Customize colors, module shapes, corner styles and add a logo.
+- Generate codes directly in the browser without requiring an account.
+- Export QR codes for use on flyers, signs, menus, table displays and other print materials.
+- No watermark, no scan limit and no third-party redirect required for static QR codes.
 
 ## Supported QR types
 
@@ -141,7 +137,7 @@ Contributions are welcome. Open an issue if you want to talk something through f
 
 ## License
 
-Released under the [MIT License](LICENSE).
+This project is based on QReate by Gabriele Rizzo and is released under the MIT License. See the LICENSE file for details.
 
 ---
 
