@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=".github/assets/banner.svg" width="100%" alt="QReate, a free QR code generator that runs in your browser" />
+  <img src=".github/assets/banner.svg" width="100%" alt="4ELEMENTS QR Kit, a free QR code generator that runs in your browser" />
 
   <p align="center">
     <a href="#features">Features</a> •
