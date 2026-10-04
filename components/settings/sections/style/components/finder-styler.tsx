@@ -7,32 +7,32 @@ import { useCodeConfigStore } from "@/stores/code-config/provider";
 import type { FinderPatternInnerStyle, FinderPatternOuterStyle } from "@lglab/react-qr-code";
 
 const SHARED_STYLES: Record<FinderPatternOuterStyle, string> = {
-    square: "Square",
-    "pinched-square": "Pinched Square",
-    "rounded-sm": "Rounded (S)",
-    rounded: "Rounded (M)",
-    "rounded-lg": "Rounded (L)",
-    circle: "Circle",
-    "inpoint-sm": "Inpoint (S)",
-    inpoint: "Inpoint (M)",
-    "inpoint-lg": "Inpoint (L)",
-    "outpoint-sm": "Outpoint (S)",
-    outpoint: "Outpoint (M)",
-    "outpoint-lg": "Outpoint (L)",
-    "leaf-sm": "Leaf (S)",
-    leaf: "Leaf (M)",
-    "leaf-lg": "Leaf (L)",
+    square: "Quadrat",
+    "pinched-square": "Eingedrücktes Quadrat",
+    "rounded-sm": "Abgerundet (S)",
+    rounded: "Abgerundet (M)",
+    "rounded-lg": "Abgerundet (L)",
+    circle: "Kreis",
+    "inpoint-sm": "Innenspitze (S)",
+    inpoint: "Innenspitze (M)",
+    "inpoint-lg": "Innenspitze (L)",
+    "outpoint-sm": "Außenspitze (S)",
+    outpoint: "Außenspitze (M)",
+    "outpoint-lg": "Außenspitze (L)",
+    "leaf-sm": "Blatt (S)",
+    leaf: "Blatt (M)",
+    "leaf-lg": "Blatt (L)",
 };
 
 const OUTER_STYLES: Record<FinderPatternOuterStyle, string> = SHARED_STYLES;
 
 const INNER_STYLES: Record<FinderPatternInnerStyle, string> = {
     ...SHARED_STYLES,
-    diamond: "Diamond",
-    star: "Star",
-    heart: "Heart",
+    diamond: "Raute",
+    star: "Stern",
+    heart: "Herz",
     hashtag: "Hashtag",
-    microchip: "Microchip",
+    microchip: "Mikrochip",
 };
 
 export function FinderStyler() {
@@ -41,9 +41,9 @@ export function FinderStyler() {
 
     return (
         <div className="flex flex-col gap-4">
-            <Labeled label="Finder" secondary="Outer" className="flex flex-row gap-2">
+            <Labeled label="Ecken" secondary="Außen" className="flex flex-row gap-2">
                 <OptionsPicker
-                    aria-label="Finder outer style"
+                    aria-label="Stil der Ecken außen"
                     value={finder.outer.style}
                     className="w-40"
                     data={Object.keys(OUTER_STYLES) as FinderPatternOuterStyle[]}
@@ -65,9 +65,9 @@ export function FinderStyler() {
                 />
             </Labeled>
 
-            <Labeled label="Finder" secondary="Inner" className="flex flex-row gap-2">
+            <Labeled label="Ecken" secondary="Innen" className="flex flex-row gap-2">
                 <OptionsPicker
-                    aria-label="Finder inner style"
+                    aria-label="Stil der Ecken innen"
                     value={finder.inner.style}
                     className="w-40"
                     data={Object.keys(INNER_STYLES) as FinderPatternInnerStyle[]}

@@ -1,6 +1,14 @@
-import { QR_TYPE_PAGES, type QrTypePage } from "@/lib/qr-pages";
+import { FEATURED_QR_TYPE_PAGES, QR_TYPE_PAGES, type QrTypePage } from "@/lib/qr-pages";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { Separator } from "@/components/ui/separator";
+import type { Icon } from "@phosphor-icons/react";
+import {
+    AddressBookIcon,
+    ForkKnifeIcon,
+    StarIcon,
+    WhatsappLogoIcon,
+    WifiHighIcon,
+} from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 
 /*
@@ -17,65 +25,73 @@ export interface Faq {
 
 export const HOME_FAQS: Faq[] = [
     {
-        question: "Is QReate really free?",
-        answer: "Yes, every feature is free: unlimited QR codes, full styling, logo embedding and high-resolution downloads. No account, no watermark, no paid tier.",
+        question: "Ist das 4ELEMENTS QR Kit wirklich kostenlos?",
+        answer: "Ja, alle Funktionen sind kostenlos: unbegrenzt viele QR-Codes, volle Gestaltung, Logo und hochauflösende Downloads. Kein Konto, kein Wasserzeichen, kein Bezahl-Tarif.",
     },
     {
-        question: "Do the QR codes expire?",
-        answer: "No. QReate generates static QR codes: your content is encoded directly in the pattern, with no redirect service in between. The code works forever, with unlimited scans.",
+        question: "Laufen die QR-Codes ab?",
+        answer: "Nein. Es entstehen statische QR-Codes: Ihr Inhalt steckt direkt im Muster, ohne Weiterleitungsdienst dazwischen. Der Code funktioniert dauerhaft und beliebig oft.",
     },
     {
-        question: "Is my data private?",
-        answer: "Yes. Codes are generated entirely in your browser, the text, passwords or contact details you enter are never uploaded to any server.",
+        question: "Was ist mit meinen Daten?",
+        answer: "Die Codes werden komplett in Ihrem Browser erzeugt. Texte, WLAN-Passwörter oder Kontaktdaten, die Sie eingeben, werden nicht an einen Server übertragen.",
     },
     {
-        question: "Do my QR codes track scans?",
-        answer: "No. Because the content is encoded directly with no redirects, there is nothing to track, by design. If you need scan analytics, a static code is the wrong tool; what you get instead is privacy and permanence.",
+        question: "Werden Scans gezählt?",
+        answer: "Nein. Weil der Inhalt direkt im Code steckt und es keine Weiterleitung gibt, kann nichts mitgezählt werden, das ist Absicht. Wer Scan-Statistiken braucht, ist mit einem statischen Code falsch beraten; dafür bekommen Sie Datenschutz und Beständigkeit.",
     },
     {
-        question: "Can I add my logo to a QR code?",
-        answer: "Yes, upload an image, size and position it, adjust its opacity, and optionally excavate the modules behind it so it stays legible. Use a higher error correction level to keep the code reliably scannable.",
+        question: "Kann ich mein Logo in den QR-Code einfügen?",
+        answer: "Ja. Laden Sie ein Bild hoch, passen Sie Größe und Deckkraft an und lassen Sie die Module dahinter optional aussparen, damit es gut lesbar bleibt. Wählen Sie dann eine höhere Fehlerkorrektur, damit der Code sicher scannbar bleibt.",
     },
     {
-        question: "Which file formats can I download?",
-        answer: "SVG for infinitely sharp print, plus PNG and JPEG at 512, 1024, 2048 or 4096 pixels for screens and documents.",
+        question: "Welche Dateiformate kann ich herunterladen?",
+        answer: "SVG für gestochen scharfen Druck in jeder Größe, außerdem PNG und JPEG mit 512, 1024, 2048 oder 4096 Pixeln für Bildschirm und Dokumente.",
     },
     {
-        question: "What is error correction?",
-        answer: "QR codes embed redundancy so they scan even when partially damaged or covered. The four levels, L, M, Q, H, recover roughly 7%, 15%, 25% and 30% of the code. Higher levels make denser codes; use Q or H when embedding a logo.",
+        question: "Was bedeutet Fehlerkorrektur?",
+        answer: "QR-Codes enthalten Redundanz, damit sie auch teilweise beschädigt oder verdeckt noch scannen. Die vier Stufen L, M, Q und H stellen etwa 7 %, 15 %, 25 % und 30 % des Codes wieder her. Höhere Stufen machen den Code dichter; mit Logo empfiehlt sich Q oder H.",
     },
     {
-        question: "How much data fits in a QR code?",
-        answer: "Up to about 2,900 characters at the lowest error correction level. Shorter content produces a coarser, faster-scanning code, so keep it brief when you can.",
+        question: "Wie viele Daten passen in einen QR-Code?",
+        answer: "Bis zu etwa 2.900 Zeichen bei der niedrigsten Fehlerkorrektur. Kürzere Inhalte ergeben ein gröberes Raster, das schneller scannt, also lieber knapp halten.",
     },
 ];
 
 const FEATURES: { title: string; body: string }[] = [
     {
-        title: "Free, no signup",
-        body: "Unlimited codes with every feature included. No account, no watermark, no trial that runs out.",
+        title: "Kostenlos, ohne Anmeldung",
+        body: "Unbegrenzt viele Codes mit allen Funktionen. Kein Konto, kein Wasserzeichen, keine Testphase, die abläuft.",
     },
     {
-        title: "Private by design",
-        body: "Everything runs in your browser. Wi-Fi passwords, contacts, links, nothing you type is ever uploaded.",
+        title: "Datensparsam",
+        body: "Alles läuft in Ihrem Browser. WLAN-Passwörter, Kontakte, Links: Nichts davon wird hochgeladen.",
     },
     {
-        title: "Never expires",
-        body: "Static codes encode your content directly, no redirect servers, no link rot, no scan limits. Print once, works forever.",
+        title: "Läuft nie ab",
+        body: "Statische Codes speichern den Inhalt direkt, ohne Weiterleitungsserver und ohne Scan-Limit. Einmal drucken, dauerhaft nutzen.",
     },
     {
-        title: "Deep customization",
-        body: "Twelve module shapes, custom finder patterns, any color, transparent backgrounds. Make a code that looks like your brand.",
+        title: "Im Look Ihres Betriebs",
+        body: "Zwölf Modulformen, eigene Eckenmuster, beliebige Farben, transparenter Hintergrund. So passt der Code zu Ihrer Marke.",
     },
     {
-        title: "Logo embedding",
-        body: "Drop your logo into the center, tune its size and opacity, and excavate the modules behind it for clean contrast.",
+        title: "Mit Ihrem Logo",
+        body: "Setzen Sie Ihr Logo in die Mitte, passen Sie Größe und Deckkraft an und sparen Sie die Module dahinter für klaren Kontrast aus.",
     },
     {
-        title: "Print-ready export",
-        body: "Vector SVG for razor-sharp print at any size, or PNG/JPEG up to 4096 px for screens, decks and documents.",
+        title: "Druckfertig",
+        body: "SVG für scharfen Druck auf Tischaufsteller, Flyer und Schaufenster, oder PNG/JPEG bis 4096 px für Bildschirm und Social Media.",
     },
 ];
+
+const FEATURED_ICONS: Record<string, Icon> = {
+    "google-bewertung-qr-code": StarIcon,
+    "whatsapp-qr-code": WhatsappLogoIcon,
+    "speisekarte-qr-code": ForkKnifeIcon,
+    "wlan-qr-code": WifiHighIcon,
+    "visitenkarte-qr-code": AddressBookIcon,
+};
 
 function JsonLd({ data }: { data: object }) {
     return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
@@ -111,9 +127,33 @@ function Hero({ h1, intro }: { h1: string; intro: string }) {
     );
 }
 
+function FeaturedTypes() {
+    return (
+        <Section id="beliebt" title="Beliebt bei lokalen Betrieben">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                {FEATURED_QR_TYPE_PAGES.map((page) => {
+                    const Icon = FEATURED_ICONS[page.slug];
+
+                    return (
+                        <Link
+                            key={page.slug}
+                            href={`/${page.slug}`}
+                            className="flex flex-col rounded-2xl border p-5 transition-colors hover:bg-muted/50"
+                        >
+                            {Icon && <Icon size={28} aria-hidden />}
+                            <h3 className="mt-3 font-medium">{page.name}</h3>
+                            <p className="mt-2 text-sm text-muted-foreground">{page.teaser}</p>
+                        </Link>
+                    );
+                })}
+            </div>
+        </Section>
+    );
+}
+
 function FeatureGrid() {
     return (
-        <Section id="features" title={`Why ${SITE_NAME}?`}>
+        <Section id="vorteile" title={`Warum das ${SITE_NAME}?`}>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {FEATURES.map((feature) => (
                     <div key={feature.title} className="rounded-2xl border p-5">
@@ -128,7 +168,7 @@ function FeatureGrid() {
 
 function Steps({ title, steps }: { title: string; steps: readonly string[] }) {
     return (
-        <Section id="how-it-works" title={title}>
+        <Section id="so-gehts" title={title}>
             <ol className="grid gap-4 sm:grid-cols-3">
                 {steps.map((step, index) => (
                     <li key={step} className="rounded-2xl border p-5">
@@ -142,10 +182,11 @@ function Steps({ title, steps }: { title: string; steps: readonly string[] }) {
 }
 
 function TypeGrid({ current }: { current?: QrTypePage }) {
-    const pages = QR_TYPE_PAGES.filter((page) => page.slug !== current?.slug);
+    // The homepage already shows the featured types prominently above.
+    const pages = QR_TYPE_PAGES.filter((page) => (current ? page.slug !== current.slug : !page.featured));
 
     return (
-        <Section id="types" title={current ? "More QR code types" : "One generator, every QR code type"}>
+        <Section id="typen" title={current ? "Weitere QR-Code-Typen" : "Noch mehr QR-Code-Typen"}>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {pages.map((page) => (
                     <Link
@@ -154,19 +195,19 @@ function TypeGrid({ current }: { current?: QrTypePage }) {
                         className="rounded-2xl border p-5 transition-colors hover:bg-muted/50"
                     >
                         <h3 className="font-medium">{page.h1}</h3>
-                        <p className="mt-2 text-sm text-muted-foreground">{page.description}</p>
+                        <p className="mt-2 text-sm text-muted-foreground">{page.teaser}</p>
                     </Link>
                 ))}
             </div>
 
             <p className="mt-6 text-sm text-muted-foreground">
-                The generator also encodes cryptocurrency addresses and raw byte payloads. To use them,{" "}
+                Der Generator kann außerdem Kryptowährungs-Adressen und Rohdaten codieren. Dafür{" "}
                 {current ? (
                     <Link href="/" className="underline underline-offset-3 hover:text-foreground">
-                        open the full QR code generator
+                        öffnen Sie den vollständigen QR-Code-Generator
                     </Link>
                 ) : (
-                    "pick the type at the top of the page"
+                    "wählen Sie oben einfach den passenden Typ"
                 )}
                 .
             </p>
@@ -176,7 +217,7 @@ function TypeGrid({ current }: { current?: QrTypePage }) {
 
 function FaqSection({ faqs }: { faqs: Faq[] }) {
     return (
-        <Section id="faq" title="Frequently asked questions">
+        <Section id="faq" title="Häufige Fragen">
             <div className="flex flex-col">
                 {faqs.map((faq) => (
                     <details key={faq.question} className="group border-b py-4">
@@ -204,32 +245,34 @@ export function HomeLanding() {
                     "@type": "WebApplication",
                     name: SITE_NAME,
                     url: SITE_URL,
+                    inLanguage: "de",
                     applicationCategory: "UtilitiesApplication",
                     operatingSystem: "Any",
-                    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+                    offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
                     description:
-                        "Free QR code generator with custom colors, shapes and logos. Runs entirely in the browser, no signup, codes never expire.",
+                        "Kostenloser QR-Code-Generator für lokale Betriebe mit eigenen Farben, Formen und Logo. Läuft komplett im Browser, ohne Anmeldung, Codes laufen nie ab.",
                     featureList: FEATURES.map((feature) => feature.title),
-                    author: { "@type": "Person", name: "Gabriele Rizzo", url: "https://x.com/gabrielerizzoo" },
+                    author: { "@type": "Organization", name: "4ELEMENTS", url: SITE_URL },
                 }}
             />
             <JsonLd data={faqJsonLd(HOME_FAQS)} />
 
             <Separator orientation="horizontal" />
             <Hero
-                h1="Free QR Code Generator"
-                intro="Create custom QR codes in seconds, pick from eleven content types, style every module, embed your logo, and export print-ready files. No signup, no watermark, no expiry. Everything runs in your browser, so what you encode stays on your device."
+                h1="QR-Codes für Gyms, Cafés, Friseure und Praxen"
+                intro="Erstellen Sie in Sekunden QR-Codes für Ihren Betrieb: für Google-Bewertungen, WhatsApp-Kontakt, Speisekarte, Gäste-WLAN oder Ihre digitale Visitenkarte. Mit Ihren Farben und Ihrem Logo, druckfertig zum Herunterladen. Ohne Anmeldung, ohne Wasserzeichen, ohne Ablaufdatum. Alles läuft in Ihrem Browser, Ihre Eingaben bleiben auf Ihrem Gerät."
+            />
+            <FeaturedTypes />
+            <Steps
+                title="So erstellen Sie Ihren QR-Code"
+                steps={[
+                    "Typ wählen, etwa Link für Google-Bewertung, WhatsApp oder Speisekarte, WLAN oder Visitenkarte, und die Angaben eintragen.",
+                    "Gestalten: Farben, Modulformen, Eckenmuster, Hintergrund oder Ihr Logo.",
+                    "Als SVG, PNG oder JPEG herunterladen oder einen Link kopieren, der Ihr Design speichert.",
+                ]}
             />
             <FeatureGrid />
             <TypeGrid />
-            <Steps
-                title="How to create a QR code"
-                steps={[
-                    "Pick a content type, link, Wi-Fi, contact, event and more, and fill in the details.",
-                    "Style it: colors, module shapes, finder patterns, background, or your logo.",
-                    "Download as SVG, PNG or JPEG, or copy a share link that preserves your design.",
-                ]}
-            />
             <FaqSection faqs={HOME_FAQS} />
         </>
     );
@@ -253,7 +296,7 @@ export function TypeLanding({ page }: { page: QrTypePage }) {
 
             <Separator orientation="horizontal" />
             <Hero h1={page.h1} intro={page.intro} />
-            <Steps title={`How to make a ${page.name} QR code`} steps={page.steps} />
+            <Steps title={`So erstellen Sie einen ${page.name}-QR-Code`} steps={page.steps} />
             <FaqSection faqs={page.faqs} />
             <FeatureGrid />
             <TypeGrid current={page} />

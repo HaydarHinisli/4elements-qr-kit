@@ -3,6 +3,7 @@ import { DownloadButton } from "@/components/actions/download-button";
 import { ResetButton } from "@/components/actions/reset-button";
 import { ShareButton } from "@/components/actions/share-button";
 import { CodeWrapper } from "@/components/layout/code-wrapper";
+import { ContactHint } from "@/components/layout/contact-hint";
 import { Footer } from "@/components/layout/footer";
 import { Nav } from "@/components/layout/nav";
 import { Settings } from "@/components/settings";
@@ -29,7 +30,7 @@ export function GeneratorShell({ initialType, children }: GeneratorShellProps) {
             <CodeProvider>
                 <div className="flex w-full flex-col">
                     <main>
-                        <section aria-label="QR code generator" className="flex flex-col sm:h-dvh sm:overflow-hidden">
+                        <section aria-label="QR-Code-Generator" className="flex flex-col sm:h-dvh sm:overflow-hidden">
                             <Nav
                                 actions={
                                     <>
@@ -63,15 +64,14 @@ export function GeneratorShell({ initialType, children }: GeneratorShellProps) {
                             </div>
                         </section>
 
+                        <Separator orientation="horizontal" />
+                        <ContactHint />
+
                         {children}
                     </main>
 
                     <Separator orientation="horizontal" />
-                    <Footer
-                        author={{ name: "Gabriele Rizzo", href: "https://x.com/gabrielerizzoo" }}
-                        payment="https://buymeacoffee.com/gabrielerizzo"
-                        version={packageJson.version}
-                    />
+                    <Footer version={packageJson.version} />
                 </div>
             </CodeProvider>
         </CodeConfigStoreProvider>

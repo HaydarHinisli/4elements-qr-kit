@@ -9,9 +9,9 @@ export function MinVersionSlider() {
     const set = useCodeConfigStore((s) => s.set);
 
     return (
-        <Labeled label="Min Version" secondary={min.toString()}>
+        <Labeled label="Mindestversion" secondary={min.toString()}>
             <Slider
-                aria-label="Min Version"
+                aria-label="Mindestversion"
                 min={1}
                 max={40}
                 value={min}

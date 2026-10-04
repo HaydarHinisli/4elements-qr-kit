@@ -1,8 +1,7 @@
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { SITE_URL } from "@/lib/site";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 
@@ -15,37 +14,40 @@ const fontMono = JetBrains_Mono({
     variable: "--font-mono",
 });
 
+const title = "QR-Code-Generator für lokale Betriebe: kostenlos | 4ELEMENTS QR Kit";
+
 const description =
-    "Create custom QR codes with logos, colors and unique shapes, free, no signup, no expiry. Wi-Fi, vCard, URL and more. Everything runs in your browser.";
+    "Kostenlose QR-Codes für Gyms, Cafés, Friseure und Praxen: Google-Bewertung, WhatsApp, Speisekarte, WLAN und Visitenkarte. Mit Logo und Farben, ohne Anmeldung, läuft nie ab.";
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
-    title: "Free QR Code Generator: Custom Designs & Logo | QReate",
+    title,
     description,
-    applicationName: "QReate",
+    applicationName: SITE_NAME,
     alternates: { canonical: "/" },
     keywords: [
         "qr code generator",
-        "free qr code generator",
-        "custom qr code",
-        "qr code with logo",
-        "wifi qr code",
-        "vcard qr code",
-        "svg qr code",
+        "qr code erstellen kostenlos",
+        "google bewertung qr code",
+        "whatsapp qr code",
+        "speisekarte qr code",
+        "wlan qr code",
+        "visitenkarte qr code",
+        "qr code mit logo",
     ],
-    authors: [{ name: "Gabriele Rizzo", url: "https://x.com/gabrielerizzoo" }],
+    authors: [{ name: "4ELEMENTS", url: SITE_URL }],
     openGraph: {
-        title: "Free QR Code Generator: Custom Designs & Logo | QReate",
+        title,
         description,
-        siteName: "QReate",
+        siteName: SITE_NAME,
+        locale: "de_DE",
         type: "website",
         url: "/",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Free QR Code Generator: Custom Designs & Logo | QReate",
+        title,
         description,
-        creator: "@gabrielerizzoo",
     },
 };
 
@@ -59,14 +61,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
     return (
-        <html lang="en" suppressHydrationWarning className={cn("font-sans", inter.variable)}>
+        <html lang="de" suppressHydrationWarning className={cn("font-sans", inter.variable)}>
             <head>
-                <meta name="apple-mobile-web-app-title" content="QReate" />
+                <meta name="apple-mobile-web-app-title" content="4ELEMENTS QR" />
             </head>
 
             <body className={`${inter.variable} ${fontMono.variable} antialiased`}>
-                <Analytics />
-
                 <ThemeProvider>
                     <TooltipProvider>{children}</TooltipProvider>
                 </ThemeProvider>

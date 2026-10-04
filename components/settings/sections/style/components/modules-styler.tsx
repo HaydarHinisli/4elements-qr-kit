@@ -9,18 +9,18 @@ import { useCodeConfigStore } from "@/stores/code-config/provider";
 type DataModulesStyleOptions = { label: string; changeable: "size" | "lineWidth" | null };
 
 const MODULES_STYLES_OPTIONS: Record<CodeDataModulesStyle, DataModulesStyleOptions> = {
-    square: { label: "Square", changeable: "size" },
-    rounded: { label: "Rounded", changeable: "lineWidth" },
-    circle: { label: "Circle", changeable: "size" },
-    heart: { label: "Heart", changeable: "size" },
-    star: { label: "Star", changeable: "size" },
-    diamond: { label: "Diamond", changeable: "size" },
-    "pinched-square": { label: "Pinched Square", changeable: "size" },
+    square: { label: "Quadrat", changeable: "size" },
+    rounded: { label: "Abgerundet", changeable: "lineWidth" },
+    circle: { label: "Kreis", changeable: "size" },
+    heart: { label: "Herz", changeable: "size" },
+    star: { label: "Stern", changeable: "size" },
+    diamond: { label: "Raute", changeable: "size" },
+    "pinched-square": { label: "Eingedrücktes Quadrat", changeable: "size" },
     hashtag: { label: "Hashtag", changeable: "size" },
-    leaf: { label: "Leaf", changeable: null },
-    "circuit-board": { label: "Circuit Board", changeable: "lineWidth" },
-    "horizontal-line": { label: "Horizontal Line", changeable: "lineWidth" },
-    "vertical-line": { label: "Vertical Line", changeable: "lineWidth" },
+    leaf: { label: "Blatt", changeable: null },
+    "circuit-board": { label: "Platine", changeable: "lineWidth" },
+    "horizontal-line": { label: "Horizontale Linien", changeable: "lineWidth" },
+    "vertical-line": { label: "Vertikale Linien", changeable: "lineWidth" },
 };
 
 export function ModulesStyler() {
@@ -30,9 +30,9 @@ export function ModulesStyler() {
 
     return (
         <div className="flex flex-col gap-4">
-            <Labeled label="Data Modules" secondary="Style" className="flex flex-row gap-2">
+            <Labeled label="Datenmodule" secondary="Stil" className="flex flex-row gap-2">
                 <OptionsPicker
-                    aria-label="Data module style"
+                    aria-label="Stil der Datenmodule"
                     value={modules.style}
                     className="w-40"
                     data={Object.keys(MODULES_STYLES_OPTIONS) as CodeDataModulesStyle[]}
@@ -56,11 +56,11 @@ export function ModulesStyler() {
 
             {changeable !== null && (
                 <Labeled
-                    label={changeable === "size" ? "Size" : "Line Width"}
+                    label={changeable === "size" ? "Größe" : "Linienstärke"}
                     secondary={modules[changeable].toString()}
                 >
                     <Slider
-                        aria-label={changeable === "size" ? "Size" : "Line Width"}
+                        aria-label={changeable === "size" ? "Größe" : "Linienstärke"}
                         min={changeable === "size" ? 0.75 : 0.25}
                         max={1}
                         value={modules[changeable]}

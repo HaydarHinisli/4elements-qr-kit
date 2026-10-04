@@ -1,6 +1,7 @@
 import { TypeLanding } from "@/components/landing";
 import { GeneratorShell } from "@/components/layout/generator-shell";
 import { QR_TYPE_PAGES, QR_TYPE_PAGE_BY_SLUG } from "@/lib/qr-pages";
+import { SITE_NAME } from "@/lib/site";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }: TypePageProps): Promise<Metad
         openGraph: {
             title: page.title,
             description: page.description,
-            siteName: "QReate",
+            siteName: SITE_NAME,
+            locale: "de_DE",
             type: "website",
             url: `/${page.slug}`,
         },

@@ -9,7 +9,7 @@ interface ColorPickerProps {
     onChange: (color: string) => void;
 }
 
-export function ColorPicker({ label = "Color", value = "#000000", onChange }: ColorPickerProps) {
+export function ColorPicker({ label = "Farbe", value = "#000000", onChange }: ColorPickerProps) {
     return (
         <Popover>
             <PopoverTrigger

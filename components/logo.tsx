@@ -2,18 +2,37 @@ interface LogoProps extends React.ComponentProps<"svg"> {
     variant?: "icon" | "default";
 }
 
+/**
+ * The 4E mark: white letters on a dark tile with a green accent bar. Uses fixed
+ * colors (no currentColor) so it reads the same in light and dark mode and can
+ * also be rendered by next/og for the Open Graph images.
+ */
+export function LogoMark(props: React.ComponentProps<"svg">) {
+    return (
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden {...props}>
+            <rect width="64" height="64" rx="14" fill="#1e1e1e" />
+            <g transform="translate(0.5 -1.5)">
+                <path
+                    fill="#ffffff"
+                    fillRule="evenodd"
+                    d="M23 14 L10 33 V38 H24 V44 H31 V38 H35 V33 H31 V14 Z M24 33 H16.6 L24 22.2 Z"
+                />
+                <path fill="#ffffff" d="M37 14 H53 V20 H44 V26 H51 V32 H44 V38 H53 V44 H37 Z" />
+                <rect x="10" y="49" width="43" height="4" rx="2" fill="#3DDC97" />
+            </g>
+        </svg>
+    );
+}
+
 export function Logo({ variant = "default", ...props }: LogoProps) {
     return (
         <div className="flex flex-row gap-2 items-center">
-            <svg {...props} viewBox="0 0 684 684" xmlns="http://www.w3.org/2000/svg">
-                <path d="M547.2 0C555.371 0 559.457 -2.70223e-05 562.908 0.186523C628.166 3.71362 680.286 55.8344 683.813 121.092C684 124.543 684 128.629 684 136.8V342C684 530.881 530.881 684 342 684C153.119 684 0 530.881 0 342C0 153.119 153.119 0 342 0H547.2ZM342 113.555C215.833 113.555 113.555 215.833 113.555 342C113.555 468.167 215.833 570.445 342 570.445C468.167 570.445 570.445 468.167 570.445 342V170.666C570.445 139.124 544.876 113.555 513.334 113.555H342Z" />
-                <path d="M227.777 342C227.777 278.917 278.917 227.777 342 227.777H427.667C443.438 227.777 456.223 240.562 456.223 256.333V342C456.223 405.083 405.083 456.223 342 456.223C278.917 456.223 227.777 405.083 227.777 342Z" />
-            </svg>
+            <LogoMark {...props} />
 
             {variant !== "icon" && (
                 <span className="text-lg font-mono">
-                    <span className="font-semibold">QR</span>
-                    <span className="text-muted-foreground">eate</span>
+                    <span className="font-semibold">4ELEMENTS</span>
+                    <span className="text-muted-foreground"> QR Kit</span>
                 </span>
             )}
         </div>
