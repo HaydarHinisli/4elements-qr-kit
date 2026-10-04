@@ -1,31 +1,26 @@
-<svg width="1280" height="440" viewBox="0 0 1280 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QReate: Free QR Code Generator">
-  <!-- panel -->
+<svg width="1280" height="440" viewBox="0 0 1280 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="4ELEMENTS QR Kit: QR Code Toolkit for Local Businesses">
   <rect x="8" y="8" width="1264" height="424" rx="28" fill="#1e1e1e" stroke="#2c2c2c" stroke-width="2"/>
 
-  <!-- logo mark -->
   <svg x="82" y="150" width="76" height="76" viewBox="0 0 684 684">
-    <path fill="#e6e2db" d="M547.2 0C555.371 0 559.457 -2.7e-05 562.908 0.186523C628.166 3.71362 680.286 55.8344 683.813 121.092C684 124.543 684 128.629 684 136.8V342C684 530.881 530.881 684 342 684C153.119 684 0 530.881 0 342C0 153.119 153.119 0 342 0H547.2ZM342 113.555C215.833 113.555 113.555 215.833 113.555 342C113.555 468.167 215.833 570.445 342 570.445C468.167 570.445 570.445 468.167 570.445 342V170.666C570.445 139.124 544.876 113.555 513.334 113.555H342Z"/>
-    <path fill="#e6e2db" d="M227.777 342C227.777 278.917 278.917 227.777 342 227.777H427.667C443.438 227.777 456.223 240.562 456.223 256.333V342C456.223 405.083 405.083 456.223 342 456.223C278.917 456.223 227.777 405.083 227.777 342Z"/>
+    <path fill="#e6e2db" d="M547.2 0C555.371 0 559.457 0 562.908 0.186523C628.166 3.71362 680.286 55.8344 683.813 121.092C684 124.543 684 128.629 684 136.8V342C684 530.881 530.881 684 342 684H136.8C128.629 684 124.543 684 121.092 683.813C55.8344 680.286 3.71362 628.166 0.186523 562.908C0 559.457 0 555.371 0 547.2V342C0 153.119 153.119 0 342 0H547.2Z"/>
+    <path fill="#1e1e1e" d="M227.777 342C227.777 278.917 278.917 227.777 342 227.777H427.667C443.438 227.777 456.223 240.562 456.223 256.333V342C456.223 405.083 405.083 456.223 342 456.223H256.333C240.562 456.223 227.777 443.438 227.777 427.667V342Z"/>
+    <path fill="#1e1e1e" d="M113.889 142.444C113.889 126.673 126.673 113.889 142.444 113.889H227.778C290.861 113.889 342 165.028 342 228.111V313.444C342 329.215 329.215 342 313.444 342H228.111C165.028 342 113.889 290.861 113.889 227.778V142.444Z"/>
+    <path fill="#1e1e1e" d="M342 370.556C342 354.785 354.785 342 370.556 342H455.889C518.972 342 570.111 393.139 570.111 456.222V541.556C570.111 557.327 557.327 570.111 541.556 570.111H456.222C393.139 570.111 342 518.972 342 455.889V370.556Z"/>
   </svg>
 
-  <!-- wordmark -->
-  <text x="176" y="212" font-family="'SF Mono','DejaVu Sans Mono',ui-monospace,monospace" font-size="60" font-weight="700">
-    <tspan fill="#e6e2db">QR</tspan><tspan fill="#8a867e">eate</tspan>
+  <text x="176" y="205" font-family="'SF Mono', 'DejaVu Sans Mono', ui-monospace, monospace" font-size="52" font-weight="700">
+    <tspan fill="#e6e2db">4ELEMENTS</tspan><tspan fill="#8a867e"> QR Kit</tspan>
   </text>
 
-  <!-- tagline -->
-  <text x="84" y="272" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="26" fill="#c8c4bc">
-    The free QR code generator that runs entirely in your browser.
+  <text x="84" y="272" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="26" fill="#c8c4bc">
+    QR code toolkit for local businesses.
   </text>
 
-  <!-- feature line -->
-  <text x="84" y="322" font-family="'SF Mono','DejaVu Sans Mono',ui-monospace,monospace" font-size="18" fill="#8a867e" letter-spacing="0.5">
-    no sign-up  ·  no tracking  ·  never expires  ·  SVG &amp; PNG export
+  <text x="84" y="322" font-family="'SF Mono', 'DejaVu Sans Mono', ui-monospace, monospace" font-size="18" fill="#8a867e" letter-spacing="0.5">
+    review links • WhatsApp • menus • SVG &amp; PNG export
   </text>
 
-  <!-- QR motif -->
   <g>
-    <!-- finder patterns -->
     <rect x="904" y="82" width="102" height="102" rx="26" fill="none" stroke="#e6e2db" stroke-width="13"/>
     <rect x="933" y="111" width="44" height="44" rx="13" fill="#e6e2db"/>
     <rect x="1074" y="82" width="102" height="102" rx="26" fill="none" stroke="#e6e2db" stroke-width="13"/>
@@ -33,7 +28,6 @@
     <rect x="904" y="252" width="102" height="102" rx="26" fill="none" stroke="#e6e2db" stroke-width="13"/>
     <rect x="933" y="281" width="44" height="44" rx="13" fill="#e6e2db"/>
 
-    <!-- data modules -->
     <g fill="#e6e2db">
       <rect x="1011" y="87" width="24" height="24" rx="7"/>
       <rect x="1045" y="121" width="24" height="24" rx="7"/>
@@ -56,6 +50,7 @@
       <rect x="1113" y="325" width="24" height="24" rx="7"/>
       <rect x="1181" y="325" width="24" height="24" rx="7"/>
     </g>
+
     <g fill="#e6e2db" opacity="0.4">
       <rect x="909" y="121" width="24" height="24" rx="7"/>
       <rect x="977" y="155" width="24" height="24" rx="7"/>
