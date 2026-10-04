@@ -39,6 +39,11 @@ export default function ImpressumPage() {
                     Registernummer: {COMPANY.registerNumber}
                 </p>
             </section>
+
+            <section>
+                <h2>Umsatzsteuer-ID</h2>
+                <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: {COMPANY.vatId}</p>
+            </section>
         </LegalPage>
     );
 }

@@ -20,7 +20,7 @@ export function LegalPage({ title, children }: LegalPageProps) {
                     className="-ml-2"
                     render={<Link href="/" aria-label="4ELEMENTS QR Kit Startseite" />}
                 >
-                    <Logo className="size-4 fill-foreground" />
+                    <Logo className="size-6" />
                 </Button>
 
                 <Button nativeButton={false} variant="outline" render={<Link href="/" />}>

@@ -10,11 +10,11 @@ const isDev = process.env.NODE_ENV === "development";
 // In development the CSP is relaxed for Fast Refresh (eval) and HMR (websocket).
 const csp = [
     "default-src 'self'",
-    `script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com${isDev ? " 'unsafe-eval'" : ""}`,
+    `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob:",
     "font-src 'self' data:",
-    `connect-src 'self' https://va.vercel-scripts.com${isDev ? " ws: http:" : ""}`,
+    `connect-src 'self'${isDev ? " ws: http:" : ""}`,
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",

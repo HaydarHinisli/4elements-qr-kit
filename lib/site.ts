@@ -17,11 +17,12 @@ export const COMPANY = {
     email: "haydar@4elements-digital.de",
     registerCourt: "Amtsgericht Charlottenburg",
     registerNumber: "HRA 61099",
+    vatId: "DE352201385",
 } as const;
 
 /** The upstream project this kit is based on (MIT, see LICENSE). */
 export const UPSTREAM = {
     name: "QReate",
     author: "Gabriele Rizzo",
-    repository: "https://github.com/gabrielerizzo/qreate",
+    repository: "https://github.com/gabriele-rizzo/QReate",
 } as const;
