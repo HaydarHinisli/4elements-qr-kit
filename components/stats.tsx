@@ -21,7 +21,7 @@ export function CodeStats() {
 
             <Separator />
 
-            <pre>{value ? `${value.length} chars` : "—"}</pre>
+            <pre>{value ? `${value.length} Zeichen` : "—"}</pre>
         </div>
     );
 }

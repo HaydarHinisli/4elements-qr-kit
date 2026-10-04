@@ -1,24 +1,22 @@
+import { SITE_NAME, UPSTREAM } from "@/lib/site";
+import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 interface FooterProps {
-    author: {
-        name: string;
-        href: string;
-    };
-    payment: string;
     version?: string;
 }
 
-export function Footer({ author, payment, version }: FooterProps) {
+export function Footer({ version }: FooterProps) {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="shrink-0 font-mono text-xs h-8 flex flex-row items-center px-4 gap-4 *:opacity-70 *:hover:opacity-100 *:transition-opacity">
+        <footer className="shrink-0 font-mono text-xs min-h-8 py-2 flex flex-row flex-wrap items-center px-4 gap-x-4 gap-y-1 *:opacity-70 *:hover:opacity-100 *:transition-opacity">
             <span>
-                &copy;{year}&nbsp;
-                <a href={author.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    {author.name}
-                </a>
+                &copy;{year}&nbsp;{SITE_NAME} · basiert auf{" "}
+                <a href={UPSTREAM.repository} target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:underline">
+                    {UPSTREAM.name} von {UPSTREAM.author}
+                </a>{" "}
+                (MIT-Lizenz)
             </span>
 
             {version && (
@@ -28,9 +26,14 @@ export function Footer({ author, payment, version }: FooterProps) {
                 </Tooltip>
             )}
 
-            <a href={payment} target="_blank" rel="noopener noreferrer" className="hover:underline ml-auto">
-                ☕️<span className="sr-only sm:not-sr-only">&nbsp;Buy me a coffee</span>
-            </a>
+            <nav aria-label="Rechtliches" className="flex flex-row gap-4 sm:ml-auto">
+                <Link href="/impressum" className="hover:underline">
+                    Impressum
+                </Link>
+                <Link href="/datenschutz" className="hover:underline">
+                    Datenschutz
+                </Link>
+            </nav>
         </footer>
     );
 }

@@ -18,8 +18,8 @@ export function OpacitySlider() {
     );
 
     return (
-        <Labeled label="Opacity" secondary={opacity?.toString() ?? "0.0"}>
-            <Slider aria-label="Opacity" min={0} max={1} value={opacity} step={0.01} onValueChange={onChange} />
+        <Labeled label="Deckkraft" secondary={opacity?.toString() ?? "0.0"}>
+            <Slider aria-label="Deckkraft" min={0} max={1} value={opacity} step={0.01} onValueChange={onChange} />
         </Labeled>
     );
 }

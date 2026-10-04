@@ -6,7 +6,7 @@ import { SegmentedPicker } from "@/components/pickers/segmented-picker";
 import { useCodeConfigStore } from "@/stores/code-config/provider";
 
 const BACKGROUND_TYPES: Record<BackgroundType, string> = {
-    filled: "Filled",
+    filled: "Gefüllt",
     transparent: "Transparent",
 };
 
@@ -15,7 +15,7 @@ export function BackgroundPicker() {
     const set = useCodeConfigStore((s) => s.set);
 
     return (
-        <Labeled label="Background" className="flex flex-row gap-2">
+        <Labeled label="Hintergrund" className="flex flex-row gap-2">
             <SegmentedPicker
                 value={background.type}
                 data={Object.keys(BACKGROUND_TYPES) as BackgroundType[]}

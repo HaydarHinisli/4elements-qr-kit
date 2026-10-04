@@ -4,17 +4,17 @@ import { OptionsPicker } from "@/components/pickers/options-picker";
 import { useCodeConfigStore } from "@/stores/code-config/provider";
 
 const CODE_TYPES: Record<CodeType, string> = {
-    text: "Plain Text",
-    url: "URL",
-    wifi: "Wi-Fi",
-    phone: "Phone",
-    email: "Email",
-    calendar: "Calendar Event",
-    geolocation: "Geolocation",
-    contact: "Contact (vCard)",
+    text: "Text",
+    url: "Link (Google-Bewertung, WhatsApp, Karte …)",
+    wifi: "WLAN",
+    phone: "Telefon",
+    email: "E-Mail",
+    calendar: "Termin",
+    geolocation: "Standort",
+    contact: "Visitenkarte (vCard)",
     sms: "SMS",
-    crypto: "Cryptocurrency",
-    data: "Raw Bytes",
+    crypto: "Kryptowährung",
+    data: "Rohdaten",
 };
 
 export default function TypePicker() {
@@ -23,7 +23,7 @@ export default function TypePicker() {
 
     return (
         <OptionsPicker
-            aria-label="Content type"
+            aria-label="Inhaltstyp"
             value={type}
             onChange={(type) => set((s) => ({ data: { ...s.data, type } }))}
             data={Object.keys(CODE_TYPES) as CodeType[]}

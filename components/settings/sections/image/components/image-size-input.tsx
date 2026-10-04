@@ -21,11 +21,11 @@ export function ImageSizeInput() {
     );
 
     return (
-        <Labeled label="Size">
+        <Labeled label="Größe">
             <div className="flex flex-row gap-2">
                 <InputGroup>
                     <InputGroupAddon>
-                        <InputGroupText>WIDTH:</InputGroupText>
+                        <InputGroupText>BREITE:</InputGroupText>
                     </InputGroupAddon>
 
                     <InputGroupInput
@@ -39,7 +39,7 @@ export function ImageSizeInput() {
 
                 <InputGroup>
                     <InputGroupAddon>
-                        <InputGroupText>HEIGHT:</InputGroupText>
+                        <InputGroupText>HÖHE:</InputGroupText>
                     </InputGroupAddon>
 
                     <InputGroupInput

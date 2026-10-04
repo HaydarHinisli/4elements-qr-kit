@@ -29,7 +29,7 @@ function Finder({ size }: { size: number }) {
 }
 
 /**
- * Shared Open Graph image design: dark canvas, QReate wordmark, page-specific
+ * Shared Open Graph image design: dark canvas, 4ELEMENTS wordmark, page-specific
  * title, and a finder-pattern motif so the card reads as "QR" at a glance.
  * Rendered at build time by app/**\/opengraph-image.tsx.
  */
@@ -51,7 +51,7 @@ export function buildOgImage(title: string, subtitle: string) {
             >
                 <div style={{ display: "flex", flexDirection: "column", maxWidth: 760 }}>
                     <div style={{ display: "flex", fontSize: 40, fontWeight: 700 }}>
-                        QR<span style={{ color: "#8a867e" }}>eate</span>
+                        4ELEMENTS<span style={{ color: "#8a867e", marginLeft: 12 }}>QR Kit</span>
                     </div>
 
                     <div style={{ display: "flex", fontSize: 76, fontWeight: 800, lineHeight: 1.1, marginTop: 28 }}>

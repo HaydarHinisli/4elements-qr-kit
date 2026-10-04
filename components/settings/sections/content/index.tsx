@@ -7,7 +7,7 @@ import { ValueFields } from "./components/value-fields";
 export default function ContentCodeSettingsSection() {
     return (
         <>
-            <Labeled label="Type">
+            <Labeled label="Typ">
                 <TypePicker />
             </Labeled>
 

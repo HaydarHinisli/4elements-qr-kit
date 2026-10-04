@@ -13,7 +13,7 @@ export function Nav({ actions }: NavProps) {
                 nativeButton={false}
                 variant="ghost"
                 className="-ml-2"
-                render={<Link href="/" aria-label="QReate home" />}
+                render={<Link href="/" aria-label="4ELEMENTS QR Kit Startseite" />}
             >
                 <Logo className="size-4 fill-foreground" />
             </Button>

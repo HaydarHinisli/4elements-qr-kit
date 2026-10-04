@@ -18,11 +18,11 @@ export function ExcavateSwitch() {
         <Field orientation="horizontal">
             <FieldContent>
                 <div className="flex flex-row gap-2">
-                    <FieldLabel htmlFor="excavate">Excavate</FieldLabel>
+                    <FieldLabel htmlFor="excavate">Aussparen</FieldLabel>
                     <Switch id="excavate" checked={excavate} onCheckedChange={onChange} />
                 </div>
 
-                <FieldDescription>Remove the modules around the embedded image.</FieldDescription>
+                <FieldDescription>Entfernt die Module hinter dem eingefügten Bild.</FieldDescription>
             </FieldContent>
         </Field>
     );

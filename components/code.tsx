@@ -25,7 +25,7 @@ export function Code() {
     if (value.length > 0 && size === null) {
         return (
             <div className="flex size-full items-center justify-center rounded-2xl border border-dashed p-6 text-center text-muted-foreground text-sm">
-                Too much data to fit in a QR code. Shorten the content or lower the error correction level.
+                Zu viele Daten für einen QR-Code. Kürzen Sie den Inhalt oder senken Sie die Fehlerkorrektur.
             </div>
         );
     }

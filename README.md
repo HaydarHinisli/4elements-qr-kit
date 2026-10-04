@@ -35,18 +35,23 @@
 
 Every type also has its own page (which helps with search) that opens the tool already set to that type.
 
-| Type               | Route               | What it does                               |
-| ------------------ | ------------------- | ------------------------------------------ |
-| URL                | `/url-qr-code`      | Link to any website                        |
-| Wi-Fi              | `/wifi-qr-code`     | Join a network without typing the password |
-| vCard              | `/vcard-qr-code`    | Add a contact / digital business card      |
-| Text               | `/text-qr-code`     | Show any message, even offline             |
-| Email              | `/email-qr-code`    | Open a prefilled email                     |
-| SMS                | `/sms-qr-code`      | Open a prefilled text message              |
-| Phone              | `/phone-qr-code`    | Tap to call                                |
-| Location           | `/location-qr-code` | Open GPS coordinates in maps               |
-| Event              | `/event-qr-code`    | Add an event to the calendar               |
-| Crypto, raw bytes  | `/`                 | Wallet addresses and arbitrary payloads    |
+| Type               | Route                       | What it does                                   |
+| ------------------ | --------------------------- | ---------------------------------------------- |
+| Google review      | `/google-bewertung-qr-code` | Open the Google review form (URL code)         |
+| WhatsApp           | `/whatsapp-qr-code`         | Open a WhatsApp chat via `wa.me` (URL code)    |
+| Menu / price list  | `/speisekarte-qr-code`      | Open an online menu or price list (URL code)   |
+| Wi-Fi              | `/wlan-qr-code`             | Join a network without typing the password     |
+| vCard              | `/visitenkarte-qr-code`     | Add a contact / digital business card          |
+| URL                | `/link-qr-code`             | Link to any website                            |
+| Phone              | `/telefon-qr-code`          | Tap to call                                    |
+| Email              | `/e-mail-qr-code`           | Open a prefilled email                         |
+| SMS                | `/sms-qr-code`              | Open a prefilled text message                  |
+| Location           | `/standort-qr-code`         | Open GPS coordinates in maps                   |
+| Event              | `/termin-qr-code`           | Add an event to the calendar                   |
+| Text               | `/text-qr-code`             | Show any message, even offline                 |
+| Crypto, raw bytes  | `/`                         | Wallet addresses and arbitrary payloads        |
+
+The upstream English routes (`/wifi-qr-code`, `/vcard-qr-code`, ...) permanently redirect to the German ones.
 
 ## Getting Started
 
@@ -59,8 +64,8 @@ Every type also has its own page (which helps with search) that opens the tool a
 
 ```bash
 # clone the repository
-git clone https://github.com/<your-username>/qreate.git
-cd qreate
+git clone https://github.com/HaydarHinisli/4elements-qr-kit.git
+cd 4elements-qr-kit
 
 # install dependencies
 pnpm install
@@ -106,11 +111,13 @@ A few parts are worth knowing about if you're poking around the code.
 
 ```text
 app/                 # routes, metadata, sitemap/robots, OG images
-  [slug]/            # per-type landing pages (wifi-qr-code, etc.)
+  [slug]/            # per-type landing pages (wlan-qr-code, etc.)
+  impressum/         # legal notice
+  datenschutz/       # privacy policy (placeholder)
 components/
   actions/           # copy, download, share, reset
   landing/           # server-rendered marketing sections + JSON-LD
-  layout/            # generator shell, nav, footer
+  layout/            # generator shell, nav, footer, contact hint, legal page frame
   settings/          # the customization panel (content, style, image)
 hooks/               # QR value + size derivation
 lib/                 # qr-size, share-state codec, page content, OG
@@ -119,7 +126,7 @@ stores/code-config/  # Zustand store + provider
 
 ## Deployment
 
-QReate is a standard Next.js app, so it runs anywhere that runs Node (Vercel, for example).
+4ELEMENTS QR Kit is a standard Next.js app, so it runs anywhere that runs Node (Vercel, for example).
 
 Set one environment variable so the canonical URLs, sitemap, and Open Graph tags point at your domain:
 

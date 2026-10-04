@@ -31,6 +31,17 @@ const securityHeaders = [
     { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
 ];
 
+// The type pages moved to German slugs; keep the upstream English URLs working.
+const legacySlugRedirects: Record<string, string> = {
+    "wifi-qr-code": "wlan-qr-code",
+    "vcard-qr-code": "visitenkarte-qr-code",
+    "url-qr-code": "link-qr-code",
+    "email-qr-code": "e-mail-qr-code",
+    "phone-qr-code": "telefon-qr-code",
+    "location-qr-code": "standort-qr-code",
+    "event-qr-code": "termin-qr-code",
+};
+
 export default {
     reactCompiler: true,
     devIndicators: false,
@@ -42,5 +53,12 @@ export default {
     },
     async headers() {
         return [{ source: "/:path*", headers: securityHeaders }];
+    },
+    async redirects() {
+        return Object.entries(legacySlugRedirects).map(([from, to]) => ({
+            source: `/${from}`,
+            destination: `/${to}`,
+            permanent: true,
+        }));
     },
 } satisfies NextConfig;

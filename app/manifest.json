@@ -1,9 +1,10 @@
 {
-  "name": "QReate: QR Code Generator",
-  "short_name": "QReate",
-  "description": "Free QR code generator with custom colors, shapes and logos. No signup, everything runs in your browser.",
+  "name": "4ELEMENTS QR Kit: QR-Code-Generator",
+  "short_name": "4ELEMENTS QR",
+  "description": "Kostenloser QR-Code-Generator für lokale Betriebe, mit eigenen Farben, Formen und Logo. Ohne Anmeldung, alles läuft im Browser.",
   "id": "/",
   "start_url": "/",
+  "lang": "de",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

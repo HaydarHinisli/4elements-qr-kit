@@ -66,13 +66,13 @@ export function ImagePicker() {
                             <UploadIcon className="size-6 text-muted-foreground" />
                         </div>
 
-                        <p className="font-medium text-sm">Drag & drop your image here</p>
-                        <p className="text-muted-foreground text-xs -mt-4">Or click to browse (up to 5MB)</p>
+                        <p className="font-medium text-sm">Logo oder Bild hierher ziehen</p>
+                        <p className="text-muted-foreground text-xs -mt-4">Oder klicken zum Auswählen (bis 5 MB)</p>
                     </div>
 
                     <FileUploadTrigger asChild>
                         <Button variant="outline" size="sm" className="mt-2 w-fit">
-                            Browse files
+                            Datei auswählen
                         </Button>
                     </FileUploadTrigger>
                 </FileUploadDropzone>
@@ -93,7 +93,7 @@ export function ImagePicker() {
                                 })
                             }
                         >
-                            <Button variant="ghost" size="icon" className="size-7" aria-label="Remove image">
+                            <Button variant="ghost" size="icon" className="size-7" aria-label="Bild entfernen">
                                 <XIcon />
                             </Button>
                         </FileUploadItemDelete>

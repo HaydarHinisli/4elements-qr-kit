@@ -12,8 +12,8 @@ export function Logo({ variant = "default", ...props }: LogoProps) {
 
             {variant !== "icon" && (
                 <span className="text-lg font-mono">
-                    <span className="font-semibold">QR</span>
-                    <span className="text-muted-foreground">eate</span>
+                    <span className="font-semibold">4ELEMENTS</span>
+                    <span className="text-muted-foreground"> QR Kit</span>
                 </span>
             )}
         </div>

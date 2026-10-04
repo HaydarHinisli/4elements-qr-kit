@@ -14,9 +14,9 @@ interface CodeConfigSection {
 }
 
 const CODE_CONFIG_SECTIONS = {
-    content: { label: "Content", icon: BracketsCurlyIcon, component: dynamic(() => import("./sections/content")) },
-    style: { label: "Style", icon: PaletteIcon, component: dynamic(() => import("./sections/style")) },
-    image: { label: "Image", icon: ImageSquareIcon, component: dynamic(() => import("./sections/image")) },
+    content: { label: "Inhalt", icon: BracketsCurlyIcon, component: dynamic(() => import("./sections/content")) },
+    style: { label: "Gestaltung", icon: PaletteIcon, component: dynamic(() => import("./sections/style")) },
+    image: { label: "Logo / Bild", icon: ImageSquareIcon, component: dynamic(() => import("./sections/image")) },
 } satisfies Record<string, CodeConfigSection>;
 
 type SectionId = keyof typeof CODE_CONFIG_SECTIONS;

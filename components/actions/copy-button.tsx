@@ -11,10 +11,10 @@ type CopyState = "success" | "error" | "processing";
 
 // Memoization is handled by the React Compiler — no manual useMemo/useCallback.
 const STATES: Record<CopyState | "idle", { label: string; icon: React.ReactNode; variant: "outline" | "secondary" | "destructive" }> = {
-    idle: { label: "Copy", icon: <CopyIcon />, variant: "outline" },
-    processing: { label: "Copying", icon: <CircleNotchIcon className="animate-spin" />, variant: "outline" },
-    success: { label: "Copied!", icon: <ClipboardIcon />, variant: "secondary" },
-    error: { label: "Failed!", icon: <WarningIcon />, variant: "destructive" },
+    idle: { label: "Kopieren", icon: <CopyIcon />, variant: "outline" },
+    processing: { label: "Kopiere …", icon: <CircleNotchIcon className="animate-spin" />, variant: "outline" },
+    success: { label: "Kopiert!", icon: <ClipboardIcon />, variant: "secondary" },
+    error: { label: "Fehler!", icon: <WarningIcon />, variant: "destructive" },
 };
 
 export function CopyButton() {

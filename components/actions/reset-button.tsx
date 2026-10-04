@@ -14,7 +14,7 @@ export function ResetButton() {
             onClick={reset}
         >
             <ArrowCounterClockwiseIcon />
-            Reset
+            Zurücksetzen
         </Button>
     );
 }

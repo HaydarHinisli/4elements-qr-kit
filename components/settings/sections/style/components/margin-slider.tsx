@@ -9,9 +9,9 @@ export function MarginSlider() {
     const set = useCodeConfigStore((s) => s.set);
 
     return (
-        <Labeled label="Margin" secondary={margin.toString()}>
+        <Labeled label="Rand" secondary={margin.toString()}>
             <Slider
-                aria-label="Margin"
+                aria-label="Rand"
                 min={1}
                 max={10}
                 value={margin}

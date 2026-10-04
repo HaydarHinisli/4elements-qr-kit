@@ -18,9 +18,9 @@ import {
 } from "../ui/dropdown-menu";
 
 const SIZES: Record<string, number> = {
-    Small: 512,
-    Medium: 1024,
-    Large: 2048,
+    Klein: 512,
+    Mittel: 1024,
+    Groß: 2048,
     XL: 4096,
 } as const;
 
@@ -62,7 +62,7 @@ export function DownloadButton() {
                 render={
                     <Button variant="default">
                         <DownloadSimpleIcon />
-                        <span className="sr-only sm:not-sr-only">Download</span>
+                        <span className="sr-only sm:not-sr-only">Herunterladen</span>
                         <CaretDownIcon size={10} className="opacity-50" />
                     </Button>
                 }
@@ -80,7 +80,7 @@ export function DownloadButton() {
                     </DropdownMenuSub>
 
                     <DropdownMenuItem onClick={() => download("svg")}>
-                        Scalable
+                        Vektor
                         <DropdownMenuShortcut>SVG</DropdownMenuShortcut>
                     </DropdownMenuItem>
                 </DropdownMenuGroup>

@@ -37,7 +37,7 @@ export function ShareButton() {
                 render={
                     <Button
                         variant={copied ? "secondary" : "outline"}
-                        aria-label={copied ? "Link copied" : "Copy share link"}
+                        aria-label={copied ? "Link kopiert" : "Link zum Teilen kopieren"}
                         onClick={onClick}
                     >
                         {copied ? <CheckIcon /> : <ShareNetworkIcon />}
@@ -46,7 +46,7 @@ export function ShareButton() {
             />
 
             <TooltipContent>
-                <p>{copied ? "Link copied!" : "Copy share link"}</p>
+                <p>{copied ? "Link kopiert!" : "Link zum Teilen kopieren"}</p>
             </TooltipContent>
         </Tooltip>
     );
